@@ -10,7 +10,7 @@ export default function CTABanner() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl bg-gradient-primary p-12 sm:p-20 overflow-hidden text-center text-white"
+          className="relative rounded-3xl bg-gradient-primary p-12 sm:p-20 overflow-hidden text-center text-white shadow-2xl"
         >
           {/* Decorative Elements */}
           <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
@@ -28,7 +28,7 @@ export default function CTABanner() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-xl flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-xl flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
               >
                 Get Started Free
                 <ArrowRight className="w-5 h-5" />

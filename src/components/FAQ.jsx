@@ -36,11 +36,11 @@ export default function FAQ() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl sm:text-4xl lg:text-5xl mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 dark:text-white"
           >
             Frequently Asked <span className="gradient-text">Questions</span>
           </motion.h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-400">
             Got questions? We've got answers. If you can't find what you're looking for, contact our support team.
           </p>
         </div>
@@ -53,13 +53,13 @@ export default function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-soft-lg transition-all duration-300"
+              className="border border-gray-200 dark:border-white/5 rounded-2xl overflow-hidden bg-white dark:bg-dark-card shadow-sm hover:shadow-soft-lg transition-all duration-300"
             >
               <button
                 onClick={() => setActiveIndex(activeIndex === i ? null : i)}
                 className="w-full p-6 text-left flex justify-between items-center group"
               >
-                <span className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors">
+                <span className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
                   {faq.question}
                 </span>
                 <ChevronDown
@@ -77,7 +77,7 @@ export default function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
-                    <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                    <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-white/5 pt-4">
                       {faq.answer}
                     </div>
                   </motion.div>

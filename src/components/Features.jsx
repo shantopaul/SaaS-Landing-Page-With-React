@@ -61,14 +61,14 @@ export default function Features() {
   }
 
   return (
-    <section id="features" className="section-padding bg-gray-50/50">
+    <section id="features" className="section-padding bg-gray-50/50 dark:bg-dark-bg/50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl sm:text-4xl lg:text-5xl mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 dark:text-white"
           >
             Powerful Features for <span className="gradient-text">Modern Teams</span>
           </motion.h2>
@@ -76,7 +76,7 @@ export default function Features() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-gray-600"
+            className="text-lg text-gray-600 dark:text-gray-400"
           >
             Everything you need to streamline your workflow and boost productivity in one integrated platform.
           </motion.p>
@@ -94,13 +94,13 @@ export default function Features() {
               key={i}
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="p-8 bg-white rounded-2xl border border-gray-100 shadow-soft-lg hover:shadow-xl transition-all duration-300 group"
+              className="p-8 bg-white dark:bg-dark-card rounded-2xl border border-gray-100 dark:border-white/5 shadow-soft-lg hover:shadow-xl transition-all duration-300 group"
             >
               <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-white ${feature.color} shadow-lg transition-transform duration-300 group-hover:scale-110`}>
                 <feature.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{feature.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

@@ -3,7 +3,7 @@ import { CheckCircle2, TrendingUp, Clock } from 'lucide-react'
 
 export default function DashboardPreview() {
   return (
-    <section className="section-padding bg-gray-50/50 relative overflow-hidden">
+    <section className="section-padding bg-gray-50/50 dark:bg-dark-bg/50 relative overflow-hidden">
       {/* Background Animated Blobs */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-blob -z-10"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-blob -z-10" style={{ animationDelay: '5s' }}></div>
@@ -16,10 +16,10 @@ export default function DashboardPreview() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 text-gray-900 dark:text-white">
               Powerful Dashboard to <span className="gradient-text">Manage Everything</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
               Our centralized dashboard gives you a bird's eye view of all your automated tasks, team performance, and data insights.
             </p>
 
@@ -35,7 +35,7 @@ export default function DashboardPreview() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-3 text-gray-700 font-medium"
+                  className="flex items-center gap-3 text-gray-700 dark:text-gray-300 font-medium"
                 >
                   <CheckCircle2 className="w-5 h-5 text-primary" />
                   {item}
@@ -59,18 +59,18 @@ export default function DashboardPreview() {
               whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-white p-2"
+              className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 dark:border-white/10 bg-white dark:bg-dark-card p-2"
             >
-              <div className="aspect-[16/10] bg-gray-100 rounded-2xl overflow-hidden relative group">
+              <div className="aspect-[16/10] bg-gray-100 dark:bg-slate-900 rounded-2xl overflow-hidden relative group">
                 {/* Mockup Dashboard Content */}
                 <div className="absolute inset-0 p-6 space-y-6">
-                  <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+                  <div className="h-8 bg-gray-200 dark:bg-slate-800 rounded w-1/3"></div>
                   <div className="grid grid-cols-3 gap-4">
-                    <div className="h-24 bg-primary/5 rounded-xl border border-primary/10"></div>
-                    <div className="h-24 bg-secondary/5 rounded-xl border border-secondary/10"></div>
-                    <div className="h-24 bg-indigo-50 rounded-xl border border-indigo-100"></div>
+                    <div className="h-24 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/10 dark:border-primary/20"></div>
+                    <div className="h-24 bg-secondary/5 dark:bg-secondary/10 rounded-xl border border-secondary/10 dark:border-secondary/20"></div>
+                    <div className="h-24 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl border border-indigo-100 dark:border-indigo-500/20"></div>
                   </div>
-                  <div className="h-48 bg-gray-200/50 rounded-xl"></div>
+                  <div className="h-48 bg-gray-200/50 dark:bg-slate-800/50 rounded-xl"></div>
                 </div>
                 
                 {/* Overlay Gradient */}
@@ -82,28 +82,28 @@ export default function DashboardPreview() {
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-10 -right-6 glass p-4 rounded-2xl shadow-glass border border-white/20 hidden sm:flex items-center gap-4"
+              className="absolute -top-10 -right-6 glass p-4 rounded-2xl shadow-glass border border-white/20 dark:border-white/10 hidden sm:flex items-center gap-4"
             >
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+              <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-600 dark:text-green-400">
                 <TrendingUp className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-gray-500 font-medium">Efficiency</p>
-                <p className="text-sm font-bold text-gray-900">+42.5%</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Efficiency</p>
+                <p className="text-sm font-bold text-gray-900 dark:text-white">+42.5%</p>
               </div>
             </motion.div>
 
             <motion.div
               animate={{ y: [0, 15, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute -bottom-6 -left-6 glass p-4 rounded-2xl shadow-glass border border-white/20 hidden sm:flex items-center gap-4"
+              className="absolute -bottom-6 -left-6 glass p-4 rounded-2xl shadow-glass border border-white/20 dark:border-white/10 hidden sm:flex items-center gap-4"
             >
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400">
                 <Clock className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-gray-500 font-medium">Time Saved</p>
-                <p className="text-sm font-bold text-gray-900">12h / week</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Time Saved</p>
+                <p className="text-sm font-bold text-gray-900 dark:text-white">12h / week</p>
               </div>
             </motion.div>
           </div>

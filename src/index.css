@@ -4,9 +4,13 @@
 
 @layer base {
   body {
-    @apply font-sans text-gray-900 bg-white;
+    @apply font-sans text-gray-900 bg-white transition-colors duration-300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark body {
+    @apply text-dark-text bg-dark-bg;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -20,11 +24,15 @@
   }
 
   .glass {
-    @apply bg-white/70 backdrop-blur-md;
+    @apply bg-white/70 backdrop-blur-md dark:bg-dark-card/70;
   }
 
   .shadow-glass {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  .dark .shadow-glass {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   }
 
   .transition-fast {
@@ -48,6 +56,10 @@
 .bg-grid-pattern {
   background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
   background-size: 30px 30px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: radial-gradient(circle, #334155 1px, transparent 1px);
 }
 
 .gradient-blob {

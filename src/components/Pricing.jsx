@@ -59,11 +59,11 @@ export default function Pricing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl sm:text-4xl lg:text-5xl mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 dark:text-white"
           >
             Simple, Transparent <span className="gradient-text">Pricing</span>
           </motion.h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-400">
             Choose the plan that fits your needs. No hidden fees, no surprises.
           </p>
         </div>
@@ -78,8 +78,8 @@ export default function Pricing() {
               viewport={{ once: true }}
               className={`relative p-8 rounded-3xl border transition-all duration-300 ${
                 plan.highlighted
-                  ? 'border-primary bg-white shadow-soft-lg scale-105 z-10'
-                  : 'border-gray-200 bg-white/50 hover:bg-white hover:shadow-soft-lg'
+                  ? 'border-primary bg-white dark:bg-dark-card shadow-soft-lg scale-105 z-10'
+                  : 'border-gray-200 dark:border-white/5 bg-white/50 dark:bg-dark-card/50 hover:bg-white dark:hover:bg-dark-card hover:shadow-soft-lg'
               }`}
             >
               {plan.highlighted && (
@@ -88,18 +88,18 @@ export default function Pricing() {
                 </div>
               )}
 
-              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-              <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{plan.name}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">{plan.description}</p>
 
               <div className="flex items-baseline gap-1 mb-8">
-                <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
-                <span className="text-gray-500 font-medium">/month</span>
+                <span className="text-4xl font-bold text-gray-900 dark:text-white">${plan.price}</span>
+                <span className="text-gray-500 dark:text-gray-400 font-medium">/month</span>
               </div>
 
               <ul className="space-y-4 mb-10">
                 {plan.features.map((feature, j) => (
-                  <li key={j} className="flex items-start gap-3 text-sm text-gray-700">
-                    <Check className={`w-5 h-5 flex-shrink-0 ${plan.highlighted ? 'text-primary' : 'text-gray-400'}`} />
+                  <li key={j} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                    <Check className={`w-5 h-5 flex-shrink-0 ${plan.highlighted ? 'text-primary' : 'text-gray-400 dark:text-gray-500'}`} />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -111,7 +111,7 @@ export default function Pricing() {
                 className={`w-full py-4 rounded-xl font-bold transition-all duration-300 ${
                   plan.highlighted
                     ? 'bg-gradient-primary text-white shadow-soft-lg'
-                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    : 'bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-slate-700'
                 }`}
               >
                 {plan.cta}
